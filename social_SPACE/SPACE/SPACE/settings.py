@@ -38,8 +38,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.humanize",
     "bootstrap5",
     "accounts",
+    "posts",
+    "groups",
 ]
 
 MIDDLEWARE = [
@@ -119,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIR = [Path.joinpath(BASE_DIR)]
+STATICFILES_DIRS = [Path.joinpath(BASE_DIR,'static')]
 
 LOGIN_REDIRECT_URL = 'test'
 LOGOUT_REDIRECT_URL = 'thanks'
